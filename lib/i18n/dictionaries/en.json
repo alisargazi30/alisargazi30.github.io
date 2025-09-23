@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "services": "Services",
+    "contact": "Contact",
+    "consultation": "Consultation",
+    "training": "Training"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Alireza Sargazi",
+    "title": "Senior Web Developer & AI Consultant",
+    "subtitle": "Transforming ideas into exceptional digital experiences with cutting-edge technology and artificial intelligence",
+    "cta": "View My Work",
+    "contact": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate web developer and AI consultant with expertise in modern technologies. I specialize in creating innovative solutions using React, Next.js, Python, and AI technologies including chatbots and automation with n8n.",
+    "experience": "5+ Years Experience",
+    "projects": "50+ Projects Completed",
+    "clients": "Happy Clients Worldwide"
+  },
+  "services": {
+    "title": "Services",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Modern, responsive websites and web applications using React, Next.js, and TypeScript"
+    },
+    "aiConsulting": {
+      "title": "AI Consulting",
+      "description": "AI strategy, implementation, and optimization for businesses looking to leverage artificial intelligence"
+    },
+    "chatbots": {
+      "title": "Chatbot Development",
+      "description": "Intelligent chatbots and conversational AI solutions for customer service and automation"
+    },
+    "automation": {
+      "title": "Process Automation",
+      "description": "Workflow automation using n8n and other tools to streamline business processes"
+    }
+  },
+  "portfolio": {
+    "title": "Featured Projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "blog": {
+    "title": "Latest Articles",
+    "readMore": "Read More",
+    "publishedOn": "Published on"
+  },
+  "consultation": {
+    "title": "Request Consultation",
+    "description": "Get expert advice on your web development or AI projects",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company (Optional)",
+      "service": "Service Type",
+      "message": "Project Details",
+      "submit": "Send Request"
+    },
+    "services": {
+      "web-development": "Web Development",
+      "ai-consulting": "AI Consulting",
+      "chatbot": "Chatbot Development",
+      "automation": "Process Automation"
+    }
+  },
+  "training": {
+    "title": "Request Training",
+    "description": "Learn from an expert with personalized training sessions",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "course": "Course Type",
+      "level": "Experience Level",
+      "language": "Preferred Language",
+      "message": "Additional Information",
+      "submit": "Request Training"
+    },
+    "courses": {
+      "frontend": "Frontend Development",
+      "python": "Python Programming",
+      "ai": "AI & Machine Learning",
+      "automation": "Automation & n8n"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "social": "Follow Me"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "builtWith": "Built with Next.js and Supabase"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "viewMore": "View More",
+    "backToTop": "Back to Top"
+  }
+}

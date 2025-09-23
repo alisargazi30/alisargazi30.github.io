@@ -1,0 +1,38 @@
+import { getDictionary } from "@/lib/i18n/dictionaries"
+import type { Locale } from "@/lib/i18n/config"
+import { Navigation } from "@/components/navigation"
+import { BlogSection } from "@/components/blog-section"
+import { isRTL } from "@/lib/i18n/config"
+
+interface PageProps {
+  params: Promise<{
+    locale: Locale
+  }>
+}
+
+export default async function BlogPage({ params }: PageProps) {
+  const { locale } = await params
+  const dict = await getDictionary(locale)
+  const isRtl = isRTL(locale)
+
+  return (
+    <div className={isRtl ? "rtl" : "ltr"}>
+      <Navigation locale={locale} dict={dict} />
+      <main className="pt-16">
+        <div className="py-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              {locale === "fa" ? "وبلاگ من" : "My Blog"}
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              {locale === "fa"
+                ? "مقالات و بینش‌هایی در زمینه توسعه وب، هوش مصنوعی و تکنولوژی"
+                : "Articles and insights on web development, AI, and technology"}
+            </p>
+          </div>
+        </div>
+        <BlogSection locale={locale} dict={dict} limit={undefined} />
+      </main>
+    </div>
+  )
+}
