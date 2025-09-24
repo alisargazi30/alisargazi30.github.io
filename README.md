@@ -39,87 +39,6 @@ A world-class, bilingual personal portfolio website built with Next.js 15, featu
 - **n8n Automation**: Workflow automation capabilities
 - **AI Consulting**: Specialized AI and machine learning services
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- Supabase account
-
-### Installation
-
-1. **Clone the repository**
-   \`\`\`bash
-   git clone https://github.com/alirezasargazi/portfolio.git
-   cd portfolio
-   \`\`\`
-
-2. **Install dependencies**
-   \`\`\`bash
-   npm install
-   \`\`\`
-
-3. **Set up environment variables**
-   \`\`\`bash
-   cp .env.example .env.local
-   \`\`\`
-   
-   Fill in your Supabase credentials:
-   \`\`\`env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-   NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL=http://localhost:3000
-   \`\`\`
-
-4. **Set up the database**
-   \`\`\`bash
-   # Run the database schema script
-   npm run db:setup
-   
-   # Seed initial data
-   npm run db:seed
-   \`\`\`
-
-5. **Start the development server**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
-
-6. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-## 📁 Project Structure
-
-\`\`\`
-├── app/                    # Next.js App Router
-│   ├── [locale]/          # Internationalized routes
-│   ├── admin/             # Admin dashboard
-│   ├── auth/              # Authentication pages
-│   └── api/               # API routes
-├── components/            # Reusable components
-│   ├── ui/               # Base UI components
-│   └── ...               # Feature components
-├── lib/                  # Utilities and configurations
-│   ├── i18n/            # Internationalization
-│   ├── supabase/        # Database client
-│   └── utils.ts         # Helper functions
-├── scripts/             # Database scripts
-└── public/              # Static assets
-\`\`\`
-
-## 🗄️ Database Schema
-
-### Tables
-- **blog_posts**: Bilingual blog articles with metadata
-- **consultation_requests**: Client consultation inquiries
-- **training_requests**: Training and course requests
-- **portfolio_projects**: Project showcase data
-
-### Security
-- Row Level Security (RLS) enabled on all tables
-- Admin-only access for content management
-- Public read access for published content
 
 ## 🌐 Internationalization
 
@@ -154,17 +73,6 @@ Update personal information in:
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-1. Push to GitHub
-2. Connect to Vercel
-3. Add environment variables
-4. Deploy automatically
-
-### Other Platforms
-The app is compatible with any platform supporting Next.js:
-- Netlify
-- Railway
-- DigitalOcean App Platform
 
 ## 📊 Performance
 
