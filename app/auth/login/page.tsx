@@ -26,11 +26,13 @@ export default function LoginPage() {
 
     try {
       const supabase = createClient()
+      const redirectUrl = typeof window !== "undefined" ? `${window.location.origin}/admin` : "/admin"
+
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
         options: {
-          emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || `${window.location.origin}/admin`,
+          emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || redirectUrl,
         },
       })
 

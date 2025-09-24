@@ -6,8 +6,13 @@ import { motion } from "framer-motion"
 export function CursorGlow() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+
+    if (typeof window === "undefined") return
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
 
@@ -20,6 +25,9 @@ export function CursorGlow() {
     window.addEventListener("mousemove", updateMousePosition)
     return () => window.removeEventListener("mousemove", updateMousePosition)
   }, [])
+
+  // Don't render on server
+  if (!isClient) return null
 
   return (
     <motion.div

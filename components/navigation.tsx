@@ -22,6 +22,8 @@ export function Navigation({ locale, dict }: NavigationProps) {
   const isRtl = isRTL(locale)
 
   useEffect(() => {
+    if (typeof window === "undefined") return
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }

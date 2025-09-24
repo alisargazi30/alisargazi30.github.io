@@ -5,8 +5,13 @@ import { motion } from "framer-motion"
 
 export function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+
+    if (typeof window === "undefined") return
+
     const updateScrollProgress = () => {
       const scrollPx = document.documentElement.scrollTop
       const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -17,6 +22,9 @@ export function ScrollProgress() {
     window.addEventListener("scroll", updateScrollProgress)
     return () => window.removeEventListener("scroll", updateScrollProgress)
   }, [])
+
+  // Don't render on server
+  if (!isClient) return null
 
   return (
     <motion.div
