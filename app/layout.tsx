@@ -13,9 +13,10 @@ import { CursorGlow } from "@/components/cursor-glow"
 import "./globals.css"
 
 const vazirmatn = Vazirmatn({
-  subsets: ["arabic"],
+  subsets: ["arabic", "latin"],
   variable: "--font-vazirmatn",
   display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${vazirmatn.variable}`}>
+      <body className={`font-sans antialiased ${GeistSans.variable} ${GeistMono.variable} ${vazirmatn.variable}`}>
         <LoadingScreen />
         <ScrollProgress />
         <FloatingElements />
